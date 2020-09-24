@@ -106,7 +106,11 @@ public class TimelineActivity extends AppCompatActivity {
                 Log.i(TAG, "onSuccess! " + json.toString());
                 JSONArray jsonArray = json.jsonArray;
                 adapter.clear();
-                adapter.addAll(Tweet.fromJsonArray(jsonArray));
+                try {
+                    adapter.addAll(Tweet.fromjsonArray(jsonArray));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 //Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);
             }
