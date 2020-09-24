@@ -105,14 +105,10 @@ public class TimelineActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 Log.i(TAG, "onSuccess! " + json.toString());
                 JSONArray jsonArray = json.jsonArray;
-                try {
-                    adapter.clear();
-                    adapter.addAll(Tweet.fromJsonArray(jsonArray));
-                    //Now we call setRefreshing(false) to signal refresh has finished
-                    swipeContainer.setRefreshing(false);
-                } catch (JSONException e) {
-                    Log.e(TAG, "Json exception", e);
-                }
+                adapter.clear();
+                adapter.addAll(Tweet.fromJsonArray(jsonArray));
+                //Now we call setRefreshing(false) to signal refresh has finished
+                swipeContainer.setRefreshing(false);
             }
 
             @Override

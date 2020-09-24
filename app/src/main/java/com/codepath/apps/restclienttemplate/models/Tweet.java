@@ -30,4 +30,8 @@ public class Tweet {
         }
         return tweets;
     }
+
+    public static List<Tweet> fromJsonArray(JSONArray jsonArray) {
+        return null;
+    }
 }
