@@ -49,7 +49,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I am using a physical device instead of an emulator, and I was told I could use my tutors and slack interns for making my GIF, but they have not been available this week due to evacuation from wildfires in their town. 
 
 ## Open-source libraries used
 
